@@ -1,0 +1,679 @@
+html{
+    scroll-behavior: smooth;
+}
+:root
+{
+    --royalpink:#e056fd;
+    --black:#090029;
+   --bgcolor:rgba(2,2,30);
+   --darkblue:#14074B;
+   --blurwhite:rgba(255,255,255,.7);
+   --lightwhite:rgba(255,255,255,.8);
+   --box-shadow: 0 1rem .5rem rgba(0,0,0,.3);
+   --border:.2rem solid rgba(255,255,255,.1);
+
+}
+::-webkit-scrollbar
+{
+    width: 1rem;
+}
+::-webkit-scrollbar-track
+{
+    background: transparent;
+}
+::-webkit-scrollbar-thumb
+{
+    background: white;
+}
+*
+{
+    margin: 0;
+    padding: 0;
+    font-family: 'Montserrat','sans-serif';
+    box-sizing: border-box;
+    text-decoration: none;
+}
+
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css');/*trophy*/
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');/*Montserrat font*/
+
+body{
+    background-color: rgba(2,2,30);
+}
+.header
+{
+    z-index:1000;
+   
+}
+.flex
+{   
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.8rem 1rem;
+    color: white;
+}
+.flex .logo
+{
+    font-size: 1.4rem;
+    color: white;
+    text-decoration: none;
+}
+.navbar a
+{
+    margin:0 1.5rem;
+    font-size: 1.1rem;
+    color: var(--lightwhite);
+    text-decoration: none;
+}
+a
+{
+    text-decoration: none;
+}
+ .btn
+{
+    position: relative;
+    border: .17rem solid #e056fd;
+    padding: 0.3rem 1.5rem;
+    font-size: 1.1rem;
+    color: var(--royalpink);
+    border-radius: .5rem;
+    cursor: pointer;
+    background: none;
+    transition: 0.2s linear;
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+}
+
+.btn::before
+{
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 100%;
+    width: 0;
+    background-color:var(--royalpink);
+    z-index: -1;
+    transition: 0.2s linear;
+}
+.btn:hover::before
+{
+    width:100%;
+    left: 0;
+}
+.btn:hover
+{
+    color: white;
+}
+.login
+{
+    margin-left: 2rem;
+}
+.icon {
+    display: flex;
+    text-align: center;
+}
+
+.logo {
+    min-width: 110px;
+    height: auto;
+    display: flex;
+  justify-content: center; 
+  align-items: center;
+  margin-left: 5px;
+}
+.logout
+{
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    text-align: center;
+}
+
+.gamepad {
+    
+    min-width: 55px;
+    height: auto; 
+    vertical-align: middle;
+}
+
+.home .flex
+{
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    min-height: 100vh;
+    flex-wrap: wrap;
+
+}
+.home .flex .content
+{
+    flex: 1 1 40rem;
+    height: 15rem;
+    padding-left: 5rem;
+ 
+}
+.home .flex .content h3
+{
+    font-size: 3.8rem;
+  color: var(--royalpink);
+    text-transform: uppercase;
+}
+.home .flex .content span
+{
+    font-size: 3.8rem;
+    color: white;
+    text-transform: uppercase;
+}
+.home .flex .content p
+{
+    font-size: 1rem;
+    color: var(--lightwhite);
+    text-align: center;
+   
+    line-height: 1.8;
+    font-weight:200;
+    margin-bottom: 1rem;
+}
+
+.heading
+{
+    text-align: center;
+    text-transform: uppercase;
+    color: white;
+}
+.heading span
+{
+    color: var(--royalpink);
+}
+
+
+.features {
+    margin: 6rem;
+}
+
+.featuretitle {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 40px;
+    text-transform: uppercase;
+    font-family: Arial, sans-serif;
+}
+
+.featuretitle span {
+    color: var(--royalpink);
+    font-family: Arial, sans-serif;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+.features .row {
+    margin-top: 5rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.features .col {
+    flex: 1;
+    min-width: 300px;
+}
+.card {
+    background-color: #343a40;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start; 
+    padding: 30px;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+    text-align: center;
+    min-height: 20rem;
+}
+
+
+
+.card-title {
+    font-weight: bold;
+    color: whitesmoke;
+    line-height: 1.2;
+    text-align: left;
+    margin-top: 10rem; 
+    text-align: center;
+
+    font-family: Arial, sans-serif;
+  
+}
+
+
+.features .flex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 40px 0;
+}
+.about
+{
+    margin-top: 2rem;
+    margin-bottom: 9rem;
+}
+.about .content
+{
+    flex: 1 1 30rem;
+    text-align: center;
+    margin: 0 15rem;
+  
+    text-align:center;
+  
+}
+.about .content h3
+{
+    font-size: 2.1rem;
+    color: white;
+    font-family: Arial,sans-serif;
+}
+.about .content p
+{
+    font-size: 1rem;
+    font-family: Arial,sans-serif;
+    color: rgba(255,255,255,.8);
+    padding: 1rem 0;
+    line-height: 1.8;
+}
+
+/* topgames css */
+.topgames
+{
+    height: 55rem;
+    margin: 0 5rem;
+}
+.topgames .box-container
+{
+    margin: 3rem 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fit,16rem);
+    gap:2rem;
+    align-items: flex-start;
+    justify-content: center;
+}
+.topgames .heading
+{
+    color: var(--royalpink);
+}
+.topgames .heading span
+{
+    color: white;
+}
+.topgames .box-container .box
+{
+ height: 20rem;   
+ border-radius: .5rem;
+ overflow: hidden;
+ position: relative;
+}
+.topgames .box-container .box img
+{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition:.2s linear;
+}
+
+.topgames .box-container .box:hover img
+{
+    transform: scale(1.1);
+}
+
+.topgames .box-container .box::before
+{
+    content: 'Play now';
+    position: absolute;
+    top: 0 ;left: 0;right: 0;bottom: 0;
+    z-index: 1;
+    background:rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--blurwhite);
+    font-family: Arial,  sans-serif;
+    font-weight: 100;
+    font-size: 1.2rem;
+    transform: scale(1.5);
+    transition:.2s linear;
+    opacity: 0;
+}
+.topgames .box-container .box:hover:before
+{
+opacity: 1;
+transform: scale(1);
+}
+
+.info
+{
+  background-color: var(--black);
+  margin-bottom: 5rem;
+}
+.info .grid{
+    padding: 2rem 0;
+    padding-bottom: 1.2rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fit,16rem);
+    gap:1.4rem;
+    align-items: flex-start;
+    justify-content: center;
+}
+.info .grid .box
+{
+    text-align: center;
+}
+.info .grid .box img
+{
+    height: 6rem;
+    width: 100%;
+    object-fit: contain;
+}
+.info .grid .box h3
+{
+    font-family: Arial,  sans-serif;
+    margin-top: 0.7rem;
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: var(--lightwhite);
+}
+.pricing
+{
+    
+    padding: 3rem 0;
+    margin-bottom: 2rem;
+    
+   
+}
+.pricing .heading
+{
+    color: white;
+    font-weight: 600;
+    
+    
+}
+
+.pricing .heading span
+{
+color: #e056fd;
+}
+.pricing .box-container
+{
+    margin: 3rem 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fit,23rem);
+    gap:2rem;
+    align-items: flex-start;
+    justify-content: center;
+    
+}
+.pricing .box-container .box
+{
+    box-shadow: var(--box-shadow);
+    border-radius: .5rem;
+    padding: 1.8rem;
+    border: var(--border);
+}
+.pricing .box-container .box h3
+{
+    font-size: 2rem;
+    padding-bottom: 1rem;
+    color: white;
+    border-bottom: var(--border);
+    text-transform: capitalize;
+}
+.pricing .box-container .box .amount
+{
+    font-size: 1.7rem;
+    text-align: center;
+    color: white;
+    margin: 1rem 0;
+}
+.pricing .box-container .box .amount span
+{
+    font-size: 2.1rem;
+    color: var(--royalpink);
+    margin-left: 2px;
+}
+.pricing .box-container .box .date
+{
+    font-size: 1.4rem;
+    color:var(--lightwhite);
+    border-radius: .5rem;
+    text-align: center;
+    background-color: var(--darkblue);
+    padding: 0.1rem ;
+    border: var(--border);
+}
+.pricing .box-container .box .list
+{
+    padding: .6rem 0;
+    margin-top: .8rem;
+}
+.pricing .box-container .box .list p
+{
+    font-size: 1.1rem;
+    padding: .2rem 0;
+    color: var(--lightwhite);
+    text-transform: capitalize;
+}
+.pricing .box-container .box .list p i
+{
+    margin-right: .8rem;
+}
+.pricing .box-container .box .list p .fa-check
+{
+    color: lime;
+}
+.xmark {
+    font: normal normal normal 14px / 1 FontAwesome;
+    font-size: 13px;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+}
+.pricing .box-container .btn
+{
+    margin-left: .2rem;
+}
+
+.contact
+{
+    padding: 2rem;
+}
+
+.contact .box-container
+{
+    display: grid;
+    grid-template-columns: repeat(auto-fit,23rem);
+    gap:2rem;
+    align-items: flex-start;
+    justify-content: center; 
+    margin: 5rem 0;
+} 
+.contact .box-container .box
+{
+    background-size: cover !important;
+    background-position: center !important;
+    padding: 3rem 2rem;
+    box-shadow: var(--box-shadow);
+    text-align: center;
+}
+
+.contact .box-container .box img
+{
+    height: 12rem;
+    margin-bottom: 2rem;
+    
+}
+.contact .box-container .box h3
+{
+    color: white;
+    font-size: 2rem;
+    margin: 1rem 0;
+    text-align: center;
+} 
+.contact .box-container .box a
+{
+    display: block;
+    text-transform: none;
+    text-decoration: none;
+    color: var(--lightwhite);
+    font-size: 1.1rem;
+    line-height: 1.6;
+    text-align: center;
+}
+.contact .box-container .box a:hover
+{
+    text-decoration: underline;
+    color: var(--royalpink);
+}
+
+.contact .form
+{
+  text-align: center;
+  padding: 4rem;
+}
+.contact .form .heading
+{
+    margin-bottom: 1rem;
+}
+.contact .form .flex
+{
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+.contact .form  .input
+{
+    flex: 1  1 40rem;
+}
+.contact .form  .input, .contact .form  textarea
+{
+    background: none;
+    color: white;
+    border: var(--border);
+    border-radius: .5rem;
+   
+    padding: 0.6rem;
+    font-size: 1.2rem;
+    text-transform: none;
+}
+.contact .form  .input:focus
+, .contact .form textarea:focus
+{
+  border-color: var(--royalpink);
+  transition: .2s linear;
+}
+.contact .form  .input:focus-visible
+, .contact .form textarea:focus-visible
+{
+    outline: none;
+}
+.contact .form  .input::placeholder , .contact .form textarea::placeholder
+{
+    text-transform: capitalize;
+}
+.contact .form textarea
+{
+    height: 15rem;
+    resize: none;
+    margin-top: 1rem;
+    margin-bottom: .5rem;
+}
+.contact .form .btn:hover
+{
+    background-color: var(--royalpink);
+}
+
+
+.footer-container {
+    margin-top: 2rem;
+    background-color: #e056fd;
+    color: white;
+    text-align: center;
+    padding-top: 1rem;
+  }
+  
+  .footer {
+    font-family: Arial, sans-serif;
+  }
+  
+  .footer-links {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 2rem;
+    padding: 2rem 0;
+  }
+  
+  .footer-link-item h6 {
+    margin: 0;
+    font-weight: bold;
+    text-transform: uppercase;
+  }
+  
+  .footer-link-item a {
+    text-decoration: none;
+    color: white;
+  }
+  
+  .footer-link-item a:hover {
+    text-decoration: underline;
+  }
+  
+  .footer-divider {
+    border: none;
+    border-top: 1px solid white;
+    margin: 2rem 0;
+  }
+  
+  .footer-description {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0 1rem;
+  }
+  
+  .footer-social {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin: 2rem 0;
+  }
+  
+  .footer-social a {
+    color: white;
+    font-size: 1.5rem;
+    text-decoration: none;
+  }
+  
+  .footer-social a:hover {
+    opacity: 0.8;
+  }
+  
+  .footer-copyright {
+    background-color: rgba(0, 0, 0, 0.1);
+    padding: 0.5rem 0;
+    font-size: 0.9rem;
+  }
+  
+  .footer-copyright a {
+    color: white;
+    text-decoration: none;
+  }
+  
+  .footer-copyright a:hover {
+    text-decoration: underline;
+  }
+  
