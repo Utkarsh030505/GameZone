@@ -35,9 +35,6 @@ GameZone/
 │   ├── login.php
 │   ├── register.php
 │   ├── logout.php
-│-- database/           # Database setup
-│   ├── db_config.php
-│   ├── users.sql
 │-- subscription/       # Subscription features
 │   ├── subscribe.php
 │   ├── payments.php
